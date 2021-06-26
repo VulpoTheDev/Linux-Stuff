@@ -1,20 +1,23 @@
 #!/bin/bash
 
-# If you're not root then kill the script
-if [ $UID -ne 0 ]
-then
-	echo "You must run this script WITH SUDO, NOT AS THE ROOT USER!" && echo
-	exit
-fiif []
-
+echo "Please make sure you're running this with root!"
 sudo pacman -Syu --noconfirm
 
 # Installs your Dev Stuff & Utils with pacman
-sudo pacman -S vim nvim nodejs npm base-devel obs-studio flameshot yay  jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src --noconfirm
+sudo pacman -S vim neovim nodejs npm base-devel obs-studio flameshot yay  jre8-openjdk-headless visual-studio-code-insiders-bin jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src firefox-developer-edition --noconfirm
 
 # Clones and makepkg stuff
-sudo yay install visual-studio-code-insiders-bin discord-canary mongodb-bin gitkraken spotify mongodb-compass  jetbrains-toolbox firefox-developer-edition --noconfirm
-
+mkdir programs; cd programs
+git clone https://aur.archlinux.org/discord-canary.git
+git clone https://aur.archlinux.org/mongodb-bin.git
+git clone https://aur.archlinux.org/gitkraken.git
+git clone https://aur.archlinux.org/mongodb-compass.git
+git clone https://aur.archlinux.org/jetbrains-toolbox.git
+cd discord-canary; makepkg -sic
+cd mongodb-bin; makepkg -sic
+cd gitkraken; makepkg -sic
+cd mongodb-compass; makepkg -sic
+cd jetbrains-toolbox; makepkg -sic
 
 # Starts & Enables MongoDB
 
