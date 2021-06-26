@@ -14,10 +14,10 @@ git clone https://aur.archlinux.org/gitkraken.git
 git clone https://aur.archlinux.org/mongodb-compass.git
 git clone https://aur.archlinux.org/jetbrains-toolbox.git
 cd discord-canary; makepkg -sic
-cd mongodb-bin; makepkg -sic
-cd gitkraken; makepkg -sic
-cd mongodb-compass; makepkg -sic
-cd jetbrains-toolbox; makepkg -sic
+cd ../mongodb-bin; makepkg -sic
+cd ../gitkraken; makepkg -sic
+cd ../mongodb-compass; makepkg -sic
+cd ../jetbrains-toolbox; makepkg -sic
 
 # Starts & Enables MongoDB
 
