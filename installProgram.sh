@@ -9,7 +9,7 @@ sudo pacman -S vim neovim nodejs npm base-devel obs-studio flameshot yay  jre8-o
 # Clones and makepkg stuff
 git clone https://aur.archlinux.org/yay.git
 cd yay; makepkg -sic; cd ..
-rm -rd ./yay
+sudo rm -rd ./yay
 yay -Syu discord-canary mongodb-bin gitkraken mongodb-compass jetbrains-toolbox visual-studio-code-insiders-bin
 
 # Starts & Enables MongoDB
