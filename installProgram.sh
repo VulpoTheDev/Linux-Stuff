@@ -7,7 +7,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S vim neovim nodejs npm base-devel obs-studio flameshot yay  jre8-openjdk-headless visual-studio-code-insiders-bin jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src firefox-developer-edition go --noconfirm
 
 # Clones and makepkg stuff
-git clone https://aur.archlinux.org/packages/yay/
+git clone https://aur.archlinux.org/yay.git
 cd yay; makepkg -sic; cd ..
 rm -rd ./yay
 yay -Syu discord-canary mongodb-bin gitkraken mongodb-compass jetbrains-toolbox
