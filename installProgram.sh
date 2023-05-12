@@ -4,7 +4,7 @@ echo "Please make sure you're running this with root!"
 sudo pacman -Syu --noconfirm
 
 # Installs your Dev Stuff & Utils with pacman
-sudo pacman -S vim neovim base-devel obs-studio flameshot yay jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src firefox-developer-edition go --noconfirm
+sudo pacman -S vim neovim base-devel obs-studio flameshot yay jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src firefox-developer-edition go python-pip python --noconfirm
 
 # Install nvm and latest version of Node.js
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
